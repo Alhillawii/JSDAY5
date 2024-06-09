@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dynamic Content Load</title>
+</head>
+<body>
+  <div id="contentContainer"></div>
+  <button onclick="loadContent()">Load Content</button>
+
+  <script>
+    function loadContent() {
+      let url = 'https://jsonplaceholder.typicode.com/posts/1'; 
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          let contentContainer = document.getElementById('contentContainer');
+
+          contentContainer.innerHTML = `
+            <h2>${data.title}</h2>
+            <p>${data.body}</p>
+          `;
+        })
+        .catch(error => {
+          console.error('Error Data:', error);
+        });
+    }
+  </script>
+</body>
+</html>

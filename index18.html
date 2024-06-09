@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Content Load</title>
+</head>
+<body>
+  <div id="contentContainer"></div>
+  <button id="loadButton">Load Content</button>
+
+  <script>
+    var contentArray = [
+      "Hello",
+      "welcome",
+      "world"
+    ];
+
+       contentArray.forEach(function(Hello) {
+        var paragraph = document.createElement('p');
+        paragraph.textContent = Hello;
+        contentContainer.appendChild(paragraph);
+      });
+
+    var loadButton = document.getElementById('loadButton');
+
+    loadButton.addEventListener('click');
+
+
+    loadContent();
+  </script>
+</body>
+</html>

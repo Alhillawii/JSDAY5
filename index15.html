@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Color Picker</title>
+</head>
+<body>
+  <label for="colorP">Choose a color:</label>
+  <input type="color" id="colorP" name="color">
+  <div id="colorv">Color will change here</div>
+
+  <script>
+    let colorInput = document.getElementById('colorP');
+    let colorDiv = document.getElementById('colorv');
+
+    colorInput.addEventListener('input', function() {
+        colorDiv.style.backgroundColor = colorInput.value;
+    });
+  </script>
+</body>
+</html>

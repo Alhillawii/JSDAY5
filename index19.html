@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Context Menu</title>
+  <style>
+    /* Style for the custom context menu */
+    #customMenu {
+      display: none;
+      position: absolute;
+      border: 5px solid yellow;
+      padding: 5px 10px;
+      z-index: 1000;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="Div">Right-click here</div>
+  <div id="customMenu">
+    <div>Welcome</div>
+    <div>To</div>
+    <div>world</div>
+  </div>
+
+  <script>
+    let myDiv = document.getElementById('Div');
+    let customMenu = document.getElementById('customMenu');
+
+    myDiv.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+
+      customMenu.style.left = event.pageY + 'px';
+      customMenu.style.top = event.pageX + 'px';
+      customMenu.style.display = 'block';
+    });
+
+    document.addEventListener('click', function(event) {
+      if (!customMenu.contains(event.target)) {
+        customMenu.style.background = 'green';
+      }
+    });
+  </script>
+</body>
+</html>

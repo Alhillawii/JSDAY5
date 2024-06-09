@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Change Image Source on Click</title>
+</head>
+<body>
+  <img id="Image" src="./images.jpg" alt="">
+  <button id="change"> Click to Change</button>
+
+  <script>
+    let image = document.getElementById('Image');
+    let button = document.getElementById('change');
+
+    button.addEventListener('click', function() {
+      image.src = 'images (2).jpg';
+    });
+  </script>
+</body>
+</html>

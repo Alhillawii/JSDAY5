@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Toggle Class on Click</title>
+  <style>
+    .highlighted {
+      background-color: orangered; 
+    }
+  </style>
+</head>
+<body>
+  <div id="iv">Click me to toggle</div>
+
+  <script>
+    let div = document.getElementById('iv');
+
+    div.addEventListener('click', function() {
+      div.classList.toggle('highlighted');
+    });
+  </script>
+</body>
+</html>

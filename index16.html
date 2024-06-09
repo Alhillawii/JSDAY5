@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Carousel Controls</title>
+  <style>
+    #carouselImage {
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="carouselContainer">
+    <img id="carouselImage" src="./images (2).jpg" alt="">
+    <button id="prevButton">Previous</button>
+    <button id="nextButton">Next</button>
+  </div>
+
+  <script>
+    let images = [
+      'images (2).jpg',
+      'images.jpg',
+      'images (1).jpg'
+    ];
+
+    let currentIndex = 0;
+    let carouselImage = document.getElementById('carouselImage');
+
+    carouselImage.src = images[currentIndex];
+
+    let prevButton = document.getElementById('prevButton');
+    let nextButton = document.getElementById('nextButton');
+
+    prevButton.addEventListener('click', function() {
+      currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+      carouselImage.src = images[currentIndex];
+    });
+
+
+    nextButton.addEventListener('click', function() {
+      currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+      carouselImage.src = images[currentIndex];
+    });
+  </script>
+</body>
+</html>

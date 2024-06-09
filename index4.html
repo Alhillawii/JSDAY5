@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+  <title>Mouse Enter Event</title>
+</head>
+<body>
+  <div id="rt">Hover Enter</div>
+
+  <script>
+    let div = document.getElementById('rt');
+    div.addEventListener('mouseenter', function() {
+      div.textContent = 'Mouse entered!';
+    });
+  </script>
+</body>
+</html>

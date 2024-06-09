@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mouse Leave Event</title>
+</head>
+<body>
+  <div id="lo">leave me</div>
+
+  <script>
+    let div = document.getElementById('lo');
+    div.addEventListener('mouseleave', function() {
+      div.textContent = 'Thank you';
+    });
+  </script>
+</body>
+</html>

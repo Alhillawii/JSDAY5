@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Double Click Event</title>
+  <style>
+    #coc {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="coc">Hello</div>
+
+  <script>
+      let div = document.getElementById('coc');
+    div.addEventListener('dblclick', function() {
+      div.style.backgroundColor = 'blue';
+    });
+  </script>
+</body>
+</html>

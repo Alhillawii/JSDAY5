@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Changing Text Content</title>
+</head>
+<body>
+  <p id="Paragraph">This is tha text</p>
+  <button id="btn">Click</button>
+
+  <script>
+    let paragraph = document.getElementById('Paragraph');
+    let button = document.getElementById('btn');
+    button.addEventListener('click', function() {
+      paragraph.textContent = 'Hello world';
+    });
+  </script>
+</body>
+</html>
