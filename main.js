@@ -29,15 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //task23//
 document.addEventListener('DOMContentLoaded', function() {
-    var elementWithTooltip = document.getElementById('elementWithTooltip');
-    var tooltip = document.getElementById('tooltip');
+    let elementWithTooltip = document.getElementById('elementWithTooltip');
+    let tooltip = document.getElementById('tooltip');
     function showTooltip() {
         tooltip.style.display = 'block';
     }
-   
+
     elementWithTooltip.addEventListener('mouseenter', showTooltip);
     elementWithTooltip.addEventListener('mouseleave', this.removeEventListener)
 });
+
+
+
 
 
 ///////
